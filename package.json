@@ -2,7 +2,8 @@
   "name": "@omernave-vonage/api-tester",
   "version": "1.0.5",
   "description": "A framework for simple API testing",
-  "main": "src/index.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
@@ -21,6 +22,9 @@
   "publishConfig": {
     "access": "public"
   },
+  "files": [
+    "lib/**/*"
+  ],
   "homepage": "https://github.com/omernave1/api-tester#readme",
   "dependencies": {
     "handlebars": "^4.7.6",
