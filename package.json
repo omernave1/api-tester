@@ -1,0 +1,38 @@
+{
+  "name": "@omernave-vonage/api-tester",
+  "version": "1.0.5",
+  "description": "A framework for simple API testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omernave1/api-tester.git"
+  },
+  "author": "Omer Nave",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/omernave1/api-tester/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "homepage": "https://github.com/omernave1/api-tester#readme",
+  "dependencies": {
+    "handlebars": "^4.7.6",
+    "js-yaml": "^4.0.0",
+    "tslint": "^6.1.3"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.3.9",
+    "@types/node": "^10.12.0",
+    "@types/supertest": "^2.0.6",
+    "jest": "^26.6.3",
+    "jest-html-reporters": "^2.1.2",
+    "prettier": "2.2.1",
+    "supertest": "^6.0.1",
+    "ts-jest": "^26.4.4",
+    "typescript": "^4.1.3"
+  }
+}
