@@ -1,6 +1,6 @@
 {
   "name": "@omernave-vonage/api-tester",
-  "version": "1.0.7",
+  "version": "1.0.9",
   "description": "A framework for simple API testing",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

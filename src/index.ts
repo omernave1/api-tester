@@ -1,11 +1,14 @@
 import { templates } from "./actions/tests";
 
-export class Tester {
-  getTemplateTests() {
-    return templates;
-  }
-
-  addTemplateTests(key: string, value: any) {
-    templates[key] = value;
-  }
+function getTemplateTests() {
+  return templates;
 }
+
+function addTemplateTests(key: string, value: any) {
+  templates[key] = value;
+}
+
+export default {
+  getTemplateTests,
+  addTemplateTests
+};
