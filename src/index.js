@@ -1,7 +1,7 @@
-import { templates } from "./src/actions/tests";
+import { templates } from './actions/tests';
 
 function run() {
-    console.log('hello');
+  console.log('hello');
 }
 
 // function addTestTemplates(key, value) {
@@ -17,6 +17,6 @@ function run() {
 // }
 
 module.exports = {
-    run: run,
-    templates
+  run: run,
+  templates
 };

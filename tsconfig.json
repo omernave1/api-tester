@@ -1,18 +1,12 @@
 {
   "compilerOptions": {
-    "outDir": "./out",
-    "rootDir": "./src",
-    "target": "es2017",
-    "lib": ["es7", "dom"],
-    "types": ["node", "express", "reflect-metadata", "jest"],
+    "esModuleInterop": true,
+    "target": "es5",
     "module": "commonjs",
-    "moduleResolution": "node",
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "sourceMap": true,
-    "declaration": false,
-    "skipLibCheck": true,
-    "esModuleInterop": true
+    "declaration": true,
+    "outDir": "./lib",
+    "strict": true
   },
-  "exclude": ["node_modules", "out", "build", "e2e"]
+  "include": ["src"],
+  "exclude": ["node_modules", "**/__tests__/*"]
 }
