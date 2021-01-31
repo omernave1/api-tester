@@ -1,14 +1,29 @@
 import { templates } from "./actions/tests";
+import * as fs from "fs";
+import * as yaml from "js-yaml";
 
-function getTemplateTests() {
-  return templates;
+export function addTemplateTests(tests: { [key: string] : any; }) {
+  Object.keys(tests).forEach( key => {
+    templates[key] = tests[key];
+  })
 }
 
-function addTemplateTests(key: string, value: any) {
-  templates[key] = value;
+export function runTests(testFiles: string[]) {
+  testFiles.forEach(file => {
+    const absolutePath = require('path').resolve(__dirname, file);
+    const yamlFile: any = yaml.load(fs.readFileSync(absolutePath, 'utf8'));
+
+    describe(yamlFile.title, () => {
+      yamlFile.tests.forEach((options: any) => {
+        const testType = options.type ?? 'default';
+        templates[testType](options);
+      });
+    });
+  });
+
 }
 
 export default {
-  getTemplateTests,
-  addTemplateTests
+  addTemplateTests,
+  runTests
 };
