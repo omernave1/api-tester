@@ -1,11 +1,9 @@
-import { templates } from "./actions/tests";
-import * as fs from "fs";
-import * as yaml from "js-yaml";
+import { templates } from './actions/tests';
 
-export function addTemplateTests(tests: { [key: string] : any; }) {
-  Object.keys(tests).forEach( key => {
+export function addTemplateTests(tests: { [key: string]: any }) {
+  Object.keys(tests).forEach((key) => {
     templates[key] = tests[key];
-  })
+  });
 }
 
 export function runTests(yamlFile: any) {
