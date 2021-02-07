@@ -10,15 +10,15 @@ export const templates: any = {
         .send(options.body || {});
 
       const expectation = options.expect;
-      Object.keys(expectation).forEach((key) => {
-        const keyArr = key.split('.');
+      expectation.forEach((e: any) => {
+        const keyArr = e.key.split('.');
 
         let compVal: any = response;
-        keyArr.forEach((k) => {
+        keyArr.forEach(k => {
           compVal = compVal[k];
         });
 
-        expect(compVal).toEqual(expectation[key]);
+        eval(`expect(compVal).${e.verb}(e.value);`)
       });
     });
   }
