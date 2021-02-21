@@ -1,5 +1,5 @@
 import supertest from 'supertest';
-import retry from 'jest-retries';
+const retry = require('jest-retries');
 
 export const templates: any = {
   default: (options: any) => {
